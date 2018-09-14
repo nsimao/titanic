@@ -154,5 +154,3 @@ dados_treino_final <- select(dados_treino, -survived)
 prev = knn(train = dados_treino_final, test = dados_teste, cl = survived, k = 2)
 submission <- data.frame(PassengerId = passengers,Survived = prev)
 write.csv(submission,'titanic_previsoes.csv', row.names = FALSE, quote = FALSE)
-
-
